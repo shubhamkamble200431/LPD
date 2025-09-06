@@ -1,8 +1,68 @@
-# mAP (mean Average Precision)
+# License Plate Detection
 
 [![GitHub stars](https://img.shields.io/github/stars/Cartucho/mAP.svg?style=social&label=Stars)](https://github.com/Cartucho/mAP)
 
-This code will evaluate the performance of your neural net for object recognition.
+This project implements an automated License Plate Recognition (LPR) system using deep learning techniques. The system combines vehicle detection, license plate detection, and Optical Character Recognition (OCR) to identify and read license plates from images.
+
+## Project Structure
+
+```
+LPR/
+├── main.py
+├── README.md
+├── tflite2.txt
+├── tfliteC.txt
+├── tfliteL.txt
+├── .dist/
+├── detection/
+│   ├── CAR_DETECT.py
+│   ├── CLASS2_DETECT.py
+│   └── LICENSE_DETECT.py
+├── inference/
+│   ├── S2CLASS.csv
+│   ├── scar.csv
+│   ├── SLicence.csv
+│   ├── 2class/
+│   ├── car/
+│   └── license/
+├── input/
+│   ├── detection-results/
+│   ├── ground-truth/
+│   └── images-optional/
+├── mAP_results/
+│   ├── NEW_MAP_2CLASS.png
+│   ├── NEW_MAP_CAR.png
+│   ├── NEW_MAP_LICENCE.png
+│   ├── outputCAR_GPU.txt
+│   ├── outputCAR.txt
+│   ├── outputLIC_GPU.txt
+│   └── outputLIC.txt
+├── ocr/
+│   ├── OCR.py
+│   ├── LP2.png
+│   ├── LP3.png
+│   ├── LP4.png
+│   ├── LP5.png
+│   ├── LP6.png
+│   └── ...
+├── output/
+│   └── ...
+├── SaveImg/
+├── scores/
+├── scripts/
+│   └── extra/
+│       ├── convert_gt_xml.py
+│       ├── convert_gt_yolo.py
+│       ├── convert_keras-yolo3.py
+│       ├── convert_dr_darkflow_json.py
+│       ├── convert_dr_yolo.py
+│       └── README.md
+└── tflite/
+```
+
+## mAP (mean Average Precision)
+
+This code evaluates the performance of your neural net for object recognition.
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/15831541/37559643-6738bcc8-2a21-11e8-8a07-ed836f19c5d9.gif" width="450" height="300" />
@@ -138,8 +198,6 @@ In the [scripts/extra](https://github.com/Cartucho/mAP/tree/master/scripts/extra
     book 0.269833 433 260 506 336
     ```
 ## Authors:
-* **João Cartucho**
+* **Shubham Kamble**
 
     Feel free to contribute
-
-    [![GitHub contributors](https://img.shields.io/github/contributors/Cartucho/mAP.svg)](https://github.com/Cartucho/mAP/graphs/contributors)
